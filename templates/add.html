@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content%}
+
+<form action="/add" method="POST">
+    <input type="text" name="tpl_task" maxlength="100" size="100">
+    <input type="submit" name="save" value="保存！">
+</form>
+
+{% endblock %}

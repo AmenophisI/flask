@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content%}
+
+<p>{{user_name}}さんこんにちは</p>
+
+<table border="1">
+    {% for item in tpl_task_list %}
+    <tr>
+        <td>{{item["tpl_id"]}}</td>
+        <td>{{item["tpl_task"]}}</td>
+        <td><a href="/edit/{{item['tpl_id']}}">編集</a></td>
+        <td><a href="/del/{{item['tpl_id']}}">削除</a></td>
+
+    </tr>
+    {% endfor %}
+
+</table>
+<a href="/add">タスクを追加</a>
+<a href="/logout">ログアウト</a>
+
+{% endblock %}

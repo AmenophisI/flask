@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content%}
+
+<form action="/edit" method="POST">
+    <input type="hidden" value="{{tpl_task['dic_id']}}" name="task_id">
+    <input type="text" value="{{tpl_task['dic_task']}}" name="task_input" size="100" maxlength="100">
+    <input type="submit" name="save" value="へんしゅう">
+</form>
+
+
+{% endblock %}
